@@ -9,27 +9,30 @@ import miniAppsImg from "../assets/projects/todoapp.png";
 const PROJECTS = [
   {
     title: "LMS System",
-    desc: "Student/Teacher/Admin dashboards, login, class tools and content upload UI.",
+    desc: "A group LMS project with separate dashboards for Students, Teachers, and Admins. I supported the React frontend development and created the UI design. We also added a quiz feature where teachers can create quizzes and students can attempt them.",
     tag: "React",
     image: lmsImg,
-    github: "https://github.com/YOUR_USERNAME/lms-project",
-    live: "https://your-live-link.com/lms",
+    github: "https://github.com/ThanujKularathna/Edvora.git",
+    live: "",
+    status: "ongoing",
   },
   {
     title: "Portfolio Website",
-    desc: "Modern personal portfolio with animations and responsive layout.",
+    desc: "My personal portfolio built with React to showcase my projects, skills, and contact details. Includes smooth animations, a modern UI, and a responsive layout for all devices.",
     tag: "UI/UX",
     image: portfolioImg,
-    github: "https://github.com/YOUR_USERNAME/portfolio",
-    live: "https://your-live-link.com/portfolio",
+    github: "https://github.com/Isuranga876/Portfolio.git",
+    live: "",
+    status: "done",
   },
   {
     title: "Mini Apps",
-    desc: "Small apps: forms, to-do, dashboards, components and reusable UI.",
+    desc: "Mini apps built to practice UI and reusable components — includes forms, to-do, and dashboards with a cute design style. Next updates will include theme switching and new feature improvements.",
     tag: "Frontend",
     image: miniAppsImg,
     github: "https://github.com/YOUR_USERNAME/mini-apps",
-    live: "https://your-live-link.com/miniapps",
+    live: "",
+    status: "ongoing",
   },
 ];
 
@@ -52,12 +55,10 @@ export default function Projects() {
               <div className="project-imgOverlay" />
             </div>
 
-            <div className="project-top">
-              <div className="badge">{p.tag}</div>
-            </div>
+            {/* ✅ REMOVED: Tag label section (React / UI/UX / Frontend) */}
 
             <h3>{p.title}</h3>
-            <p className="muted">{p.desc}</p>
+            <p className="muted project-desc">{p.desc}</p>
 
             <div className="project-actions">
               {/* ✅ Live Website */}
@@ -80,7 +81,17 @@ export default function Projects() {
                 GitHub
               </a>
 
-              
+              {/* ✅ Status */}
+              <span
+                className={
+                  "project-status " +
+                  (p.status === "done" ? "status-done" : "status-ongoing")
+                }
+                title={p.status === "done" ? "Completed Project" : "Work in Progress"}
+              >
+                <span className="status-dot" />
+                {p.status === "done" ? "Completed" : "Ongoing"}
+              </span>
             </div>
           </div>
         ))}
