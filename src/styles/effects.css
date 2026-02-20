@@ -364,7 +364,20 @@
 /* =========================
    PROJECTS
 ========================= */
-.project-card h3{ margin-top: 6px; }
+/* .project-card h3{ 
+  margin-top: 6px;
+  
+} */
+
+.project-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  min-height: 100%;
+}
+
+
 .project-top{ display:flex; justify-content:flex-end; }
 .badge{
   padding: 6px 10px;
@@ -377,9 +390,17 @@
 .project-actions{
   display:flex;
   gap: 12px;
-  margin-top: 16px;
   flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 10px; /* small breathing space */
 }
+
+.project-desc{
+  margin-bottom: 18px;
+}
+
+
+
 
 /* =========================
    SOCIAL LINKS
@@ -1192,4 +1213,73 @@
 /* buttons spacing already exists, but keep clean */
 .project-actions a.btn{
   text-decoration: none;
+}
+
+
+/* =========================
+   PROJECT STATUS (NEW)
+========================= */
+
+.project-status{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.88);
+  font-size: 13px;
+  font-weight: 800;
+  user-select: none;
+  white-space: nowrap;
+
+  transition:
+    transform var(--d2) var(--ease),
+    background var(--d2) var(--ease),
+    border-color var(--d2) var(--ease),
+    box-shadow var(--d2) var(--ease);
+}
+
+/* small dot */
+.status-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(245,158,11,0.95);
+  box-shadow: 0 0 16px rgba(245,158,11,0.25);
+}
+
+/* Hover animation same premium feel */
+.project-status:hover{
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Ongoing style (with pulse) */
+.status-ongoing{
+  background: rgba(245,158,11,0.10);
+  border-color: rgba(245,158,11,0.28);
+}
+
+.status-ongoing .status-dot{
+  animation: statusPulse 1.6s ease-in-out infinite;
+}
+
+/* Done style */
+.status-done{
+  background: rgba(124,255,178,0.10);
+  border-color: rgba(124,255,178,0.28);
+}
+
+.status-done .status-dot{
+  background: rgba(124,255,178,0.95);
+  box-shadow: 0 0 16px rgba(124,255,178,0.25);
+  animation: none;
+}
+
+@keyframes statusPulse{
+  0%,100%{ transform: scale(1); opacity: .75; }
+  50%{ transform: scale(1.6); opacity: 1; }
 }
