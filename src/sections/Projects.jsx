@@ -2,9 +2,9 @@ import SectionTitle from "../components/SectionTitle";
 import SectionFX from "../components/SectionFX";
 
 // ✅ Add images (place them in: src/assets/projects/)
-import lmsImg from "../assets/projects/lms.jpg";
-import portfolioImg from "../assets/projects/portfolio.jpg";
-import miniAppsImg from "../assets/projects/miniapps.jpg";
+import lmsImg from "../assets/projects/lmslogo.png";
+import portfolioImg from "../assets/projects/portfolio.png";
+import miniAppsImg from "../assets/projects/todoapp.png";
 
 const PROJECTS = [
   {
@@ -79,6 +79,8 @@ export default function Projects() {
               >
                 GitHub
               </a>
+
+              
             </div>
           </div>
         ))}
