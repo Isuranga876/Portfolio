@@ -10,28 +10,28 @@ import ruslLogo from "../assets/education/rusl.png";
 
 const EDUCATION = [
   {
-    name: "Primary School",
+    name: "Ku/Weuda Royal College",
     role: "Primary Education",
     meta: "Completed primary education and built a strong foundation for learning and communication skills.",
     logo: primaryLogo,
     status: "past",
   },
   {
-    name: "Central School",
+    name: "Ku/Weuda Royal Cental College",
     role: "Secondary Education",
     meta: "Completed G.C.E. Ordinary Level (O/L) education with a strong academic focus while actively participating in music and extracurricular activities.",
     logo: centralLogo,
     status: "past",
   },
   {
-    name: "High School",
+    name: "Kingswood College, Kandy",
     role: "Higher Secondary Education",
     meta: "Completed G.C.E. Advanced Level (A/L) education with a Technology stream. Alongside academic development, I actively participated in music activities.",
     logo: highLogo,
     status: "past",
   },
   {
-    name: "Britishway Academy",
+    name: "Britishway English Academy",
     role: "Professional Training",
     meta: "Improved communication skills and practical learning through structured training and activities.",
     logo: britishwayLogo,
