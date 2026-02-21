@@ -1405,3 +1405,121 @@
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
+
+
+/* =========================
+   ABOUT: EDUCATION (NEW)
+========================= */
+
+.about-edu{
+  margin-top: 20px;
+}
+
+.about-eduHead{
+  text-align: center;
+  margin: 18px 0 14px;
+}
+
+.about-eduTitle{
+  font-size: 20px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.92);
+  margin-bottom: 6px;
+}
+
+.about-eduSub{
+  max-width: 60ch;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.about-eduGrid{
+  margin-top: 14px;
+}
+
+.edu-card{
+  padding: 16px;
+}
+
+.edu-top{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.edu-logoWrap{
+  width: 95px;     /* ✅ bigger */
+  height: 95px;    /* ✅ bigger */
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.25);
+  flex: 0 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.edu-logo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.edu-meta{
+  min-width: 0;
+  flex: 1;
+}
+
+.edu-name{
+  font-weight: 900;
+  font-size: 13px;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.3;
+}
+
+.edu-role{
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.edu-pill{
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.85);
+  background: rgba(245,158,11,0.10);
+  border: 1px solid rgba(245,158,11,0.25);
+  white-space: nowrap;
+}
+
+.edu-desc{
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.edu-pill{
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 900;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+/* ✅ Past */
+.edu-past{
+  color: rgba(255,255,255,0.78);
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.12);
+}
+
+/* ✅ Current */
+.edu-current{
+  color: rgba(255,255,255,0.92);
+  background: rgba(245,158,11,0.12);
+  border-color: rgba(245,158,11,0.30);
+  box-shadow: 0 12px 30px rgba(245,158,11,0.14);
+}
