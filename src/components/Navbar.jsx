@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 
+// ✅ add your logo (put file in src/assets/)
+import logoImg from "../assets/icons/logo.png";
+
 export default function Navbar() {
   const items = [
     { name: "Home", link: "#home", id: "home" },
@@ -34,12 +37,20 @@ export default function Navbar() {
   return (
     <header className="nav-header">
       <div className="nav-inner glass">
-        <a className="logo" href="#home">
-          <span className="accent">Isuranga</span>
-          <span className="muted">.dev</span>
+        {/* ✅ UPDATED LOGO AREA */}
+        <a className="brand" href="#home" aria-label="Go to Home">
+          <img className="brand-logo" src={logoImg} alt="Isuranga logo" />
+          <div className="brand-text">
+            <span className="brand-name accent">Isuranga</span>
+            <span className="brand-dot muted">.dev</span>
+          </div>
         </a>
 
-        <button className="nav-burger btn btn-secondary" onClick={() => setOpen((v) => !v)}>
+        <button
+          className="nav-burger btn btn-secondary"
+          onClick={() => setOpen((v) => !v)}
+          aria-label="Open menu"
+        >
           ☰
         </button>
 
@@ -54,7 +65,11 @@ export default function Navbar() {
               {it.name}
             </a>
           ))}
-          <a href="#contact" className="btn btn-primary hover-lift" onClick={() => setOpen(false)}>
+          <a
+            href="#contact"
+            className="btn btn-primary hover-lift"
+            onClick={() => setOpen(false)}
+          >
             Hire Me
           </a>
         </nav>
