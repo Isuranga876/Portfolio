@@ -1523,3 +1523,39 @@
   border-color: rgba(245,158,11,0.30);
   box-shadow: 0 12px 30px rgba(245,158,11,0.14);
 }
+
+/* =========================
+   NAV BRAND (LOGO)
+========================= */
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  text-decoration:none;
+}
+
+.brand-logo{
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.25);
+}
+
+.brand-text{
+  display:flex;
+  align-items:baseline;
+  gap: 2px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.brand-name{
+  font-size: 18px;
+}
+
+.brand-dot{
+  font-size: 18px;
+}
