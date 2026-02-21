@@ -1697,3 +1697,22 @@
     border-bottom: none;
   }
 }
+
+/* Prevent horizontal scroll globally */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Ensure hero does not exceed screen width */
+.hero {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Prevent hero-grid overflow */
+.hero-grid {
+  width: 100%;
+}
+
