@@ -1,4 +1,4 @@
-import profile from "../assets/images/profile.jpg";git 
+import profile from "../assets/images/profile.jpg";
 import SectionFX from "../components/SectionFX";
 
 export default function Home() {
