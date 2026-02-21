@@ -1523,3 +1523,189 @@
   border-color: rgba(245,158,11,0.30);
   box-shadow: 0 12px 30px rgba(245,158,11,0.14);
 }
+
+/* =========================================
+   HOME / HERO - RESPONSIVE FIX (ADD THIS)
+   - keeps same design, improves mobile/tablet
+========================================= */
+
+/* Let hero shrink nicely on small screens */
+.hero-frame{
+  padding: clamp(18px, 4vw, 46px);
+  min-height: auto; /* prevents huge empty height on mobile */
+}
+
+/* Make grid flexible on tablets */
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(18px, 4vw, 46px);
+  align-items: center;
+}
+
+/* Make long title wrap nicely */
+.hero-title{
+  line-height: 1.1;
+  word-break: normal;
+}
+
+/* Improve description readability on small screens */
+.hero-desc{
+  line-height: 1.7;
+  max-width: 60ch;
+}
+
+/* Stats: allow wrap (3 -> 2 -> 1) */
+.hero-stats{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+}
+
+/* Image wrapper: responsive sizing */
+.hero-photo-wrap{
+  width: min(360px, 88vw);
+  height: min(360px, 88vw);
+}
+
+/* Image: responsive sizing */
+.hero-photo{
+  width: min(300px, 72vw);
+  height: min(300px, 72vw);
+}
+
+/* Rings scale with wrapper */
+.ring-1{ width: min(340px, 84vw); height: min(340px, 84vw); }
+.ring-2{ width: min(400px, 96vw); height: min(400px, 96vw); }
+
+/* =========================
+   Tablet (<= 1000px)
+========================= */
+@media (max-width: 1000px){
+  .hero-grid{
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .hero-right{
+    order: -1; /* image shows first on mobile/tablet */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .hero-title{
+    font-size: clamp(30px, 5vw, 38px);
+  }
+
+  .hero-actions{
+    gap: 12px;
+  }
+
+  .hero-stats{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* =========================
+   Mobile (<= 650px)
+========================= */
+@media (max-width: 650px){
+  .hero-actions{
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn{
+    width: 100%;
+  }
+
+  .hero-stats{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stat{
+    border-right: none; /* avoid weird borders when wrapping */
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+  }
+  .stat:nth-last-child(-n+2){
+    border-bottom: none;
+  }
+
+  .hero-desc{
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   Small Mobile (<= 420px)
+========================= */
+@media (max-width: 420px){
+  .hero-title{
+    font-size: 28px;
+  }
+
+  .hero-stats{
+    grid-template-columns: 1fr;
+  }
+
+  .stat{
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+  }
+  .stat:last-child{
+    border-bottom: none;
+  }
+}
+
+/* =========================================
+   HERO MOBILE FIX (photo not under navbar)
+========================================= */
+
+/* Give room for sticky navbar so hero content doesn't hide behind it */
+@media (max-width: 1000px){
+  .hero-frame{
+    padding-top: 92px; /* adjust if your navbar height changes */
+  }
+}
+
+/* Make photo smaller + push it down a little on mobile */
+@media (max-width: 650px){
+  .hero-frame{
+    padding-top: 100px; /* safe top space for sticky nav */
+  }
+
+  .hero-right{
+    margin-top: 6px;   /* space below navbar */
+    margin-bottom: 14px;
+  }
+
+  .hero-photo-wrap{
+    width: min(300px, 78vw);
+    height: min(300px, 78vw);
+  }
+
+  .hero-photo{
+    width: min(240px, 62vw);
+    height: min(240px, 62vw);
+  }
+
+  .ring-1{ width: min(300px, 80vw); height: min(300px, 80vw); }
+  .ring-2{ width: min(350px, 90vw); height: min(350px, 90vw); }
+}
+
+/* Extra small phones */
+@media (max-width: 420px){
+  .hero-frame{
+    padding-top: 100px;
+  }
+
+  .hero-photo-wrap{
+    width: min(270px, 76vw);
+    height: min(270px, 76vw);
+  }
+
+  .hero-photo{
+    width: min(220px, 60vw);
+    height: min(220px, 60vw);
+  }
+}
