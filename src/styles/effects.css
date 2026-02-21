@@ -1559,3 +1559,141 @@
 .brand-dot{
   font-size: 18px;
 }
+
+/* =========================
+   HERO RESPONSIVE FIX
+========================= */
+
+/* Make hero container flexible on small screens */
+.hero-frame{
+  padding: 46px;
+}
+
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 46px;
+  align-items: center;
+}
+
+/* Keep text readable */
+.hero-title{
+  font-size: 44px;
+  line-height: 1.1;
+  word-break: break-word;
+}
+
+.hero-desc{
+  line-height: 1.65;
+}
+
+/* Buttons */
+.hero-actions{
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Photo sizing */
+.hero-photo-wrap{
+  position: relative;
+  width: 360px;
+  height: 360px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-photo{
+  width: 300px;
+  height: 300px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+
+/* rings already exist but ensure they scale */
+.ring-1{ width: 340px; height: 340px; }
+.ring-2{ width: 400px; height: 400px; }
+
+/* ✅ Tablet */
+@media (max-width: 1000px){
+  .hero-frame{
+    padding: 28px;
+  }
+
+  .hero-grid{
+    grid-template-columns: 1fr;
+    gap: 26px;
+    text-align: center;
+  }
+
+  .hero-right{
+    order: -1; /* photo on top */
+    display:flex;
+    justify-content:center;
+  }
+
+  .hero-actions{
+    justify-content: center;
+  }
+
+  .hero-desc{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-stats{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 520px;
+  }
+}
+
+/* ✅ Mobile */
+@media (max-width: 520px){
+  .hero-frame{
+    padding: 18px;
+  }
+
+  .hero-title{
+    font-size: 32px;
+  }
+
+  .hero-name{
+    font-size: 16px;
+  }
+
+  .hero-actions{
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-actions .btn{
+    width: 100%;
+  }
+
+  .hero-photo-wrap{
+    width: 260px;
+    height: 260px;
+  }
+
+  .hero-photo{
+    width: 210px;
+    height: 210px;
+  }
+
+  .ring-1{ width: 250px; height: 250px; }
+  .ring-2{ width: 300px; height: 300px; }
+
+  .hero-stats{
+    grid-template-columns: 1fr;
+  }
+
+  .stat{
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+  }
+  .stat:last-child{
+    border-bottom: none;
+  }
+}
