@@ -22,7 +22,7 @@ const YT_VIDEOS = [
 const SOCIALS = [
   {
     name: "YouTube",
-    href: "https://www.youtube.com/",
+    href: "https://www.youtube.com/@BnFlute-cc4or",
     brand: "youtube",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -32,7 +32,7 @@ const SOCIALS = [
   },
   {
     name: "Facebook",
-    href: "https://www.facebook.com/",
+    href: "https://www.facebook.com/profile.php?id=61553749813068",
     brand: "facebook",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -42,7 +42,7 @@ const SOCIALS = [
   },
   {
     name: "TikTok",
-    href: "https://www.tiktok.com/",
+    href: "https://www.tiktok.com/@isurangabandara3?lang=en",
     brand: "tiktok",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -52,7 +52,7 @@ const SOCIALS = [
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/",
+    href: "https://www.instagram.com/isuranga_bandara_/",
     brand: "instagram",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
