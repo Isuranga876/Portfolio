@@ -1283,3 +1283,125 @@
   0%,100%{ transform: scale(1); opacity: .75; }
   50%{ transform: scale(1.6); opacity: 1; }
 }
+
+/* =========================
+   SKILLS (NEW)
+   - no hover effects
+   - description area
+========================= */
+
+.skills-intro{
+  padding: 18px;
+  border-radius: var(--r4);
+  margin: 14px auto 18px;
+  max-width: 950px;
+}
+
+.skills-h3{
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  color: rgba(255,255,255,0.92);
+}
+
+.skills-p{
+  line-height: 1.65;
+  max-width: 70ch;
+}
+
+.skills-chips{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.skills-chip{
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.10);
+  font-size: 12px;
+  color: rgba(255,255,255,0.78);
+}
+
+.skills-groups{
+  display: grid;
+  gap: 18px;
+}
+
+.skills-group{
+  padding: 18px;
+}
+
+.skills-groupHead{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.skills-groupTitle{
+  font-size: 16px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.92);
+}
+
+.skills-groupDesc{
+  font-size: 13px;
+  margin-top: 6px;
+  line-height: 1.6;
+  max-width: 75ch;
+}
+
+/* keep your theme - just ensure spacing */
+.skills-grid{
+  margin-top: 12px;
+}
+
+/* =========================
+   SKILLS: HOVER EFFECTS (ON)
+========================= */
+
+/* Skill cards hover */
+.skills-section .mini-card{
+  transition:
+    transform var(--d2) var(--ease),
+    box-shadow var(--d2) var(--ease),
+    background var(--d2) var(--ease),
+    border-color var(--d2) var(--ease);
+  will-change: transform;
+}
+
+.skills-section .mini-card:hover{
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md), var(--glow);
+  border-color: rgba(245,158,11,0.25);
+  background: rgba(255,255,255,0.06);
+}
+
+/* Chips hover */
+.skills-section .skills-chip{
+  transition:
+    transform var(--d2) var(--ease),
+    background var(--d2) var(--ease),
+    border-color var(--d2) var(--ease),
+    box-shadow var(--d2) var(--ease);
+  will-change: transform;
+}
+
+.skills-section .skills-chip:hover{
+  transform: translateY(-3px);
+  background: rgba(245,158,11,0.12);
+  border-color: rgba(245,158,11,0.28);
+  box-shadow: 0 14px 34px rgba(245,158,11,0.14);
+}
+
+.skills-section .skills-group{
+  transition: transform var(--d2) var(--ease), box-shadow var(--d2) var(--ease);
+}
+.skills-section .skills-group:hover{
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
